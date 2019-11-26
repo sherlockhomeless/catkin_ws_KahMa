@@ -129,8 +129,6 @@ class WheelCalibrator:
         # iterate over all points in coordinate_history
         for i in range(len(self.coordinate_history[0])):
             point = self.get_point_from_index(i)
-            # TODO: EXTERMLY UGLY
-
             for bucket in buckets:
                 if len(bucket) == 0 or point[2] == bucket[0][2]:
                     bucket.append(point)
